@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  jupyter:
+    image: jupyter/base-notebook:latest
+    container_name: mi_jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    environment:
+      - JUPYTER_TOKEN=1234
